@@ -1,0 +1,56 @@
+Starting Spark Scaling Benchmarks
+=================================
+TEST: Horizontal Strong | CORES: 2 | DATA: 5GB
+
+real	11m26.147s
+user	0m37.934s
+sys	0m3.446s
+---------------------------------
+TEST: Horizontal Strong | CORES: 4 | DATA: 5GB
+
+real	9m28.054s
+user	0m41.458s
+sys	0m3.871s
+---------------------------------
+TEST: Horizontal Strong | CORES: 6 | DATA: 5GB
+
+real	7m20.511s
+user	0m41.005s
+sys	0m3.777s
+---------------------------------
+TEST: Horizontal Weak | CORES: 2 | DATA: 2gig/reddit_2gb.json
+
+real	6m48.184s
+user	0m36.964s
+sys	0m3.441s
+---------------------------------
+TEST: Horizontal Weak | CORES: 4 | DATA: 4gig/reddit_4gb.json
+
+real	6m3.000s
+user	0m38.397s
+sys	0m3.302s
+---------------------------------
+TEST: Vertical Strong | TOTAL CORES: 3 | CORES/EXEC: 1 | FIXED MEM/EXEC: 2400M | DATA: 5GB
+
+real	8m53.087s
+user	0m42.919s
+sys	0m3.987s
+---------------------------------
+TEST: Vertical Strong | TOTAL CORES: 6 | CORES/EXEC: 2 | FIXED MEM/EXEC: 2400M | DATA: 5GB
+
+real	3m54.990s
+user	0m37.014s
+sys	0m3.641s
+---------------------------------
+TEST: Vertical Weak | TOTAL CORES: 3 | CORES/EXEC: 1 | FIXED MEM/EXEC: 2400M | DATA: 2gig/reddit_2gb.json
+
+real	4m4.713s
+user	0m37.688s
+sys	0m3.372s
+---------------------------------
+TEST: Vertical Weak | TOTAL CORES: 6 | CORES/EXEC: 2 | FIXED MEM/EXEC: 2400M | DATA: 4gig/reddit_4gb.json
+
+real	4m3.768s
+user	0m37.832s
+sys	0m3.057s
+---------------------------------
