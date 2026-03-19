@@ -1,5 +1,28 @@
 This project implements a distributed data pipeline to process and analyze the Webis-TLDR-17 dataset (approx. 20GB, 3.8M posts) on the Swedish Science Cloud. The primary objective is to verify Zipf's Law—a statistical phenomenon where word frequency is inversely proportional to its rank—using a scalable Spark/HDFS cluster.
 
+## 🛠️ Tech Stack & Infrastructure
+
+**Core Frameworks & Languages**
+* **Apache Spark (PySpark):** The core distributed computing engine used for the ETL pipeline, parallel processing, and global Shuffle aggregations.
+* **Python 3:** The primary language used for the Spark application logic and rendering the final scalability visualizations.
+* **Bash:** Used for automating the benchmarking loops, managing environment variables, and submitting Spark jobs to the cluster.
+
+**Infrastructure & Storage**
+* **HDFS (Hadoop Distributed File System):** The distributed storage layer used to house the 5GB of raw Reddit JSON data and the partitioned Parquet output files.
+* **Ubuntu Linux VMs:** A 4-node standalone cluster (1 Master, 3 Workers) utilizing `ssc.medium` instances (2 vCPUs, 4GB RAM) for physical compute.
+
+**Data Science & Visualization**
+* **Pandas & NumPy:** Used on the Master node to process the final, reduced Top 10,000 word arrays.
+* **Matplotlib:** Used to generate the Zipf's Law frequency distributions and the horizontal/vertical performance benchmark charts.
+
+## Contributors:
+* Infrastructure Engineer: Stanisław Kaminski
+* Data Engineer (Ingestion): Aidan Lee-Gilligan
+* Core Logic Developer: Radosław Gersz
+* Test and QA engineer: Garveet Jain
+* Analyst and Reporter: Jainyu Liu
+
+
 # The architecture diagram for the project: 
 
 ![Architecture diagram](https://github.com/user-attachments/assets/fce102d2-1f62-474e-9b8f-54605d0e6248)
