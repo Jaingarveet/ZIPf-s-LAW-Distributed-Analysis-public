@@ -1,6 +1,6 @@
 This project implements a distributed data pipeline to process and analyze the Webis-TLDR-17 dataset (approx. 20GB, 3.8M posts) on the Swedish Science Cloud. The primary objective is to verify Zipf's Law—a statistical phenomenon where word frequency is inversely proportional to its rank—using a scalable Spark/HDFS cluster.
 
-The architecture diagram for the project: 
+# The architecture diagram for the project: 
 
 ![Architecture diagram](https://github.com/user-attachments/assets/fce102d2-1f62-474e-9b8f-54605d0e6248)
 
