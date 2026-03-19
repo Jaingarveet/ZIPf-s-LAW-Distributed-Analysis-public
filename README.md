@@ -27,8 +27,29 @@ This project implements a distributed data pipeline to process and analyze the W
 
 ![Architecture diagram](https://github.com/user-attachments/assets/fce102d2-1f62-474e-9b8f-54605d0e6248)
 
-# Install Python dependencies
+
+## ⚙️ Prerequisites & Environment Setup
+
+This pipeline is designed to execute on a pre-configured Ubuntu standalone cluster (1 Master, 3 Workers). Before executing the scripts, ensure the underlying environment meets the following global dependencies:
+
+* **Java Development Kit (JDK):** OpenJDK 17 must be installed globally across all nodes.
+* **Environment Variables:** `JAVA_HOME` must be permanently exported (e.g., in `/etc/environment`) pointing to the JDK installation path (`/usr/lib/jvm/java-17-openjdk-amd64`).
+* **Python Environment:** Python 3 must be installed with `pip` and `venv` available. 
+
+*(Note: This repository assumes the Spark Master/Worker daemons and the Hadoop Distributed File System (HDFS) are already initialized and actively running).*
+
+### 📦 Step 0: Install Python Dependencies
+Before running the benchmarking scripts, install the required Python libraries. It is highly recommended to do this inside a virtual environment.
+
+\`\`\`bash
+# Create and activate a virtual environment
+python3 -m venv env
+source env/bin/activate
+
+# Install the project dependencies
 pip install -r requirements.txt
+\`\`\`
+
 
 # Download data and unzip into HDFS
 To get the compressed data run the following:
