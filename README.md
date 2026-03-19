@@ -41,14 +41,12 @@ This pipeline is designed to execute on a pre-configured Ubuntu standalone clust
 ### 📦 Step 0: Install Python Dependencies
 Before running the benchmarking scripts, install the required Python libraries. It is highly recommended to do this inside a virtual environment.
 
-\`\`\`bash
 # Create and activate a virtual environment
 python3 -m venv env
 source env/bin/activate
 
 # Install the project dependencies
 pip install -r requirements.txt
-\`\`\`
 
 
 # Download data and unzip into HDFS
